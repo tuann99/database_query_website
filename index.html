@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/final_css.css">
+    <title>Final</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1 id="h1" class="text">Cancer Drug
+Interaction Database</h1>
+      <h2 id="h2" class="text">Tuan Nguyen
+        tnguy256@jhu.edu
+        AS.410.701 - Final Project
+      </h2>
+    </div>
+
+    <div id="intro" class="text">
+      Welcome! This is a searchable database of cancer drugs and how well they interact with different cancer cell lines. The drug-cell interaction is measured from IC50, or the concentration of drug required to inhibit 50% of cell growth. The lower the IC50, the more effective the drug is at inhibiting cell growth (i.e. you need a lower concentration of drug to inhibit the cell growth).
+    </div>
+    <!-- <div id="intro" class="text">
+      From this table, you can get the drug IC50, as well as the drug target and drug target pathway. You can also get the cell line the drug was tested on, and tissue type the cell line was derived from.
+    </div> -->
+
+    <div id="search_bar">
+      <input type="text" placeholder="Enter your drug of interest here..." id="search_box" class="text" method="post"></input>
+      <button type="button" class="text" id="search_button">Search</button>
+    </div>
+
+    <div id="search_output">
+      <h3 id="h3" class="text">{{ drug_name }}</h3>
+      <table id="table">
+        <th class="text">Drug Target</th>
+        <th class="text">Drug Target Pathway</th>
+        <th class="text">Drug IC50</th>
+        <th class="text">Cell Line</th>
+        <th class="text">Tissue</th>
+        {{ for item in sql_query }}
+          <tr>
+            <td class="text">
+              {{ drug_target }}
+            </td>
+            <td class="text">
+              {{ drug_target_pathway }}
+            </td>
+            <td class="text">
+              {{ drug_ic50 }}
+            </td>
+            <td class="text">
+              {{ cell_line }}
+            </td>
+            <td class="text">
+              {{ tissue }}
+            </td>
+          </tr>
+        {{ endfor }}
+      </table>      
+    </div>
+
+  </body>
+
+</html>
