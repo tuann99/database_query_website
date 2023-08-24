@@ -1,4 +1,4 @@
-* ABOUT *
+ABOUT
 
 Welcome to my final project for Advanced Practical Computer Concepts for Bioinformatics!
 
@@ -12,7 +12,7 @@ I have created a SQL database (final.db), which will be queried using a CGI scri
 
 In cases where your drug is not in the database, the webpage will still load, but the tables will not populate.
 
-* TOOL USAGE *
+TOOL USAGE
 
 This is a very simple tool, that only requires the user to type in a drug into the search bar, and either press the "submit" button, or press the "enter" key on the keyboard. Once submitted, the CGI script will run, and render the page with your results.
 
