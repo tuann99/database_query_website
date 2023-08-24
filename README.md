@@ -1,7 +1,6 @@
-# tnguy256_final_project
 * ABOUT *
 
-Welcome to my final project!
+Welcome to my final project for Advanced Practical Computer Concepts for Bioinformatics!
 
 This is a web-interface that allows users to search for anti-cancer drugs and get back information such as IC50, protein targets, and more.
 
