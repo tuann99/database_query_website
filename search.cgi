@@ -34,7 +34,6 @@ GROUP BY t.drug_target, p.drug_target_pathway, c.cell_line_name;
 data = curs.execute(query, (search_term, search_term))
 rows = data.fetchall()
 
-# make list to append results to
 entries = list()
 
 for row in rows: 
